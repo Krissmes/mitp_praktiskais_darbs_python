@@ -1,0 +1,18 @@
+[
+  {
+    "nosaukums": "1984",
+    "autors": "George Orwell",
+    "cena": 9.99,
+    "pieejams": 5,
+    "izsniegts": 2
+  }
+  ,
+  {
+    "nosaukums": "ABC",
+    "autors": "Alphabet",
+    "cena": 19.99,
+    "pieejams": 77,
+    "izsniegts": 23
+  }
+]
+
