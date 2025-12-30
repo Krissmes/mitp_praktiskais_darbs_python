@@ -1,50 +1,44 @@
 [
-  {
-    "nosaukums": "1984",
-    "autors": "George Orwell",
-    "cena": 9.99,
-    "pieejamais skaits": 5,
-    "izsniegtais skaits": 2
-  }
-  ,
-  {
-    "nosaukums": "ABC",
-    "autors": "Alphabet",
-    "cena": 19.99,
-    "pieejamais skaits": 77,
-    "izsniegtais skaits": 23
-  }
-  ,
-  {
-    "nosaukums": "Wuthering heights",
-    "autors": "Emily Bronte",
-    "cena": 7.99,
-    "pieejamais skaits": 13,
-    "izsniegtais skaits": 2
-  }
-  ,
-  {
-    "nosaukums": "Matematika II",
-    "autors": "Uzdevumi.lv",
-    "cena": 15.99,
-    "pieejamais skaits": 12,
-    "izsniegtais skaits": 88
-  }
-  ,
-  {
-    "nosaukums": "Fizika",
-    "autors": "Marta Britala",
-    "cena": 25.99,
-    "pieejamais skaits": 12,
-    "izsniegtais skaits": 33
-  }
-  ,
-  {
-    "nosaukums": "Miljardieris",
-    "autors": "Tomass Eriksons",
-    "cena": 12.99,
-    "pieejamais skaits": 28,
-    "izsniegtais skaits": 12
-  }
+    {
+        "nosaukums": "1984",
+        "autors": "George Orwell",
+        "cena": 9.99,
+        "pieejamais skaits": 3,
+        "izsniegtais skaits": 4
+    },
+    {
+        "nosaukums": "ABC",
+        "autors": "Alphabet",
+        "cena": 19.99,
+        "pieejamais skaits": 77,
+        "izsniegtais skaits": 23
+    },
+    {
+        "nosaukums": "Wuthering heights",
+        "autors": "Emily Bronte",
+        "cena": 7.99,
+        "pieejamais skaits": 13,
+        "izsniegtais skaits": 2
+    },
+    {
+        "nosaukums": "Matematika II",
+        "autors": "Uzdevumi.lv",
+        "cena": 15.99,
+        "pieejamais skaits": 12,
+        "izsniegtais skaits": 88
+    },
+    {
+        "nosaukums": "Fizika",
+        "autors": "Marta Britala",
+        "cena": 25.99,
+        "pieejamais skaits": 12,
+        "izsniegtais skaits": 33
+    },
+    {
+        "nosaukums": "Miljardieris",
+        "autors": "Tomass Eriksons",
+        "cena": 12.99,
+        "pieejamais skaits": 28,
+        "izsniegtais skaits": 12
+    }
 ]
-
