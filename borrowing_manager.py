@@ -49,7 +49,7 @@ def give_book(name, give_count):
                         temp_pieejamais_skaits = dati[x]['pieejamais skaits'] - give_count          #samazina grāmatu pieejamo skaitu
                         temp_izsniegtais_skaits = dati[x]['izsniegtais skaits'] + give_count        #palielina grāmatu izsniegto skaitu
                     except:
-                        print("Error: Kaut kas nogāja greizi")                                                      #izprintē error, ja notiek negaidīta kļūda(nevajadzētu būt kļūdām pateicoties iepriekšējām pārbaudēm, bet, ņemot vērā to, ka pēc funkcijas dati tiks saglabāti, izlēmu izmantot try un except, lai kods būtu vēl drošāks)
+                        print("Error: Kaut kas nogāja greizi")                                                      #izprintē Error, ja notiek negaidīta kļūda(nevajadzētu būt kļūdām pateicoties iepriekšējām pārbaudēm, bet, ņemot vērā to, ka pēc funkcijas dati tiks saglabāti, izlēmu izmantot try un except, lai kods būtu vēl drošāks)
                     else:
                         dati[x]['pieejamais skaits'] = temp_pieejamais_skaits               
                         dati[x]['izsniegtais skaits'] = temp_izsniegtais_skaits             # izmaiņas saglabā mainīgajā dati
@@ -95,7 +95,36 @@ def recive_book(name, recieve_count):
         print("ValueError: Grāmatas nosaukumam tiek gaidīts string tipa mainīgais un atgriežamo grāmatu skaitam tiek gaidīts nenegatīvs integer tipa mainīgais, tika ievadīts kaut kas cits.")  # paziņo lietotājam, ka ievaddatu nosaukumam ir jābūt string formātā un ka atgriežamo grāmatu skaitam jābūt integer formātā.
                       
 
-# give_book('ABC', 1 )
-# print(dati)
-# recive_book('ABC', 1 )
-# print(dati)
+
+
+
+def least_5_given_books():
+    """
+    Funkcija lietotājam parāda 5 visretāk izsniegtās grāmatas.
+    Šeit nav ievaddati, funkcija tikai lietotājam parāda sarakstu ar 5 grāmatām.
+"""
+    least_given_books = []              #saraksts ar piecām visretāk izsniegtajām grāmatām
+
+    if len(dati) <= 5:                       # pārbauda vai saraksts garums ir mazāks vai vienāds ar 5
+        for x in range(len(dati)):              # ja tā ir, tad visas grāmatas pievieno least_given_books sarakstam
+            least_given_books.append(dati[x])
+
+    else:                                   # ja sarakstā ir vairāk par 5 grāmatām, tad ir jāsaprot, kurām ir vismazākais 'izsniegtais skaits' 
+        def temp_func(book):                    #key parametrs priekš sort metodes(vajadzīgs, lai sakārtotu pēc atslēgas 'izsniegtais skaits') 
+            return book['izsniegtais skaits']
+
+        temp_dati = dati.copy()                     #izveidoju dati kopiju, lai, tad, kad sakārtoju sarakstu, šīs izmaiņas nenotiktu globāli(neizmainītu sarakstu dati)
+        temp_dati.sort(key=temp_func)               #sakārto datus augošā secībā
+                                
+        for x in range(5):
+            least_given_books.append(temp_dati[x])       #pirmos piecus elemntus pievieno sarakstam ar piecām visretāk izsniegtajām grāmatām
+
+    print(least_given_books)                # parāda lietotājam sarakstu ar piecām visretāk izsniegtajām grāmatām
+
+    
+
+
+
+# least_5_given_books()
+
+
