@@ -1,44 +1,79 @@
 [
     {
-        "nosaukums": "1984",
-        "autors": "George Orwell",
-        "cena": 9.99,
-        "pieejamais skaits": 3,
+        "nosaukums": "jsadlfjasd",
+        "autors": "asdfasdfds",
+        "cena": 4.0,
+        "pieejamais skaits": 5,
+        "izsniegtais skaits": 3
+    },
+    {
+        "nosaukums": "asdfasdf",
+        "autors": "asdfasd",
+        "cena": 4.0,
+        "pieejamais skaits": 5,
         "izsniegtais skaits": 4
     },
     {
-        "nosaukums": "ABC",
-        "autors": "Alphabet",
-        "cena": 19.99,
-        "pieejamais skaits": 77,
-        "izsniegtais skaits": 23
+        "nosaukums": "joks",
+        "autors": "joks",
+        "cena": 566.99,
+        "pieejamais skaits": 5,
+        "izsniegtais skaits": 0
     },
     {
-        "nosaukums": "Wuthering heights",
-        "autors": "Emily Bronte",
-        "cena": 7.99,
-        "pieejamais skaits": 13,
-        "izsniegtais skaits": 2
+        "nosaukums": "liels",
+        "autors": "mazs",
+        "cena": 90.0,
+        "pieejamais skaits": 100,
+        "izsniegtais skaits": 1
     },
     {
-        "nosaukums": "Matematika II",
-        "autors": "Uzdevumi.lv",
-        "cena": 15.99,
-        "pieejamais skaits": 12,
-        "izsniegtais skaits": 88
+        "nosaukums": "How to fix the goverment",
+        "autors": "Some Body",
+        "cena": 9.0,
+        "pieejamais skaits": 100,
+        "izsniegtais skaits": 20
     },
     {
-        "nosaukums": "Fizika",
-        "autors": "Marta Britala",
-        "cena": 25.99,
-        "pieejamais skaits": 12,
-        "izsniegtais skaits": 33
+        "nosaukums": "kaut kas",
+        "autors": "cits",
+        "cena": 4.0,
+        "pieejamais skaits": 69,
+        "izsniegtais skaits": 0
     },
     {
-        "nosaukums": "Miljardieris",
-        "autors": "Tomass Eriksons",
-        "cena": 12.99,
-        "pieejamais skaits": 28,
-        "izsniegtais skaits": 12
+        "nosaukums": "jauna",
+        "autors": "vecis",
+        "cena": 69.0,
+        "pieejamais skaits": 50,
+        "izsniegtais skaits": 1000
+    },
+    {
+        "nosaukums": "y",
+        "autors": "x",
+        "cena": 100.0,
+        "pieejamais skaits": 70,
+        "izsniegtais skaits": 70
+    },
+    {
+        "nosaukums": "cits joks",
+        "autors": "joks",
+        "cena": 500.0,
+        "pieejamais skaits": 8,
+        "izsniegtais skaits": 7
+    },
+    {
+        "nosaukums": "kaut kas labs2",
+        "autors": "booo",
+        "cena": 7.0,
+        "pieejamais skaits": 1000,
+        "izsniegtais skaits": 0
+    },
+    {
+        "nosaukums": "\u0136erme\u0146a valodas vardn\u012bca",
+        "autors": "D\u017eo Navarro",
+        "cena": 5.0,
+        "pieejamais skaits": 1,
+        "izsniegtais skaits": 90
     }
 ]
