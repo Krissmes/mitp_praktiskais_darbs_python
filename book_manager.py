@@ -13,8 +13,8 @@ def add_book(): #funkcija ļauj pievienot jaunu grāmatu
     print("Enter the necessary information about the book to be added:")
     def book_info(): #pieprasa no lietotāja informāciju par grāmatu
         try: #pārbauda vai cena/pieejamais skaits ir pārvēršami par float un int
-            nosaukums = input("Enter the name of the book:\n")
-            autors = input("Enter the author of the book:\n")
+            nosaukums = input("Enter the name of the book:\n").lower()
+            autors = input("Enter the author of the book:\n").lower()
             cena = float(input("Enter the price of the book (number):\n"))
             pieejamais_skaits = int(input("Enter the available number of this book (number):\n"))
 
@@ -48,8 +48,11 @@ def add_book(): #funkcija ļauj pievienot jaunu grāmatu
 def all_books(): #izprintē visu sarakstu ar grāmatām
     with open(file_path, "r") as f:
         books = json.load(f)
-    saraksts = json.dumps(books, indent=4)
-    print(saraksts)
+    print(f"{"Title:":<50} {"Author:":<40} {"Price:":<15} {"In stock:":<15} {"Given out:":<15}\n") #sakārto sarakstu stabiņos ar noteiktām atstarpēm starp stabiņiem
+    for book in books:
+        virsraksts = book["nosaukums"].capitalize()
+        autors = book["autors"].title()
+        print(f"{virsraksts:<50} {autors:<40} {book["cena"]:<15} {book["pieejamais skaits"]:<15} {book["izsniegtais skaits"]:<15}\n", "_" * 150)
 
 #funkcija top izsniegtākajām grāmatām 
 def top5_izsniegts():
@@ -58,16 +61,16 @@ def top5_izsniegts():
         books = json.load(f)
     sorted_books = sorted(books, key=lambda x: x["izsniegtais skaits"], reverse=True) #sakārto ielādētos datus pēc "izsniegtais skaits" dilstošā secībā
     for x in sorted_books[:5]:
-        print(f"Name: {x["nosaukums"]}\nAuthor: {x["autors"]}\nGiven: {x["izsniegtais skaits"]} times") #izprintē top 5 grāmatu nosaukumus, autorus, izsniegto skaitu
+        print(f"{sorted_books.index(x) + 1}. Name: {x["nosaukums"].capitalize()}\nAuthor: {x["autors"].title()}\nGiven out: {x["izsniegtais skaits"]} times\n", "_" * 10) #izprintē top 5 grāmatu nosaukumus, autorus, izsniegto skaitu
 
 #tāda pati funkcija kā iepriekšējā tikai dārgākajām grāmatām
 def top5_expensive():
     print("Top 5 most expensive books:")
     with open(file_path, "r") as f:
         books = json.load(f)
-    sorted_expensive = sorted(books, key=lambda x: x["cena"], reverse=True)
-    for x in sorted_expensive[:5]:
-        print(f"Name: {x["nosaukums"]}\nAuthor: {x["autors"]}\nCena: {x["cena"]}")
+    sorted_books = sorted(books, key=lambda x: x["cena"], reverse=True)
+    for x in sorted_books[:5]:
+        print(f"{sorted_books.index(x) + 1}. Name: {x["nosaukums"].capitalize()}\nAuthor: {x["autors"].title()}\nPrice: {x["cena"]}\n", "_" * 10)
 #funkcija grāmatas satura mainīšanai
 def change_book():
     with open(file_path, "r") as f:
@@ -79,13 +82,13 @@ def change_book():
         find_option = input("Enter 'name' if you want to search by name or\nEnter 'author' if you want to search by author:\n").lower()
 #grāmatas tiek pievienotas listei meklējot tās pēc vārda
         if find_option == "name":
-            find_name = input("Enter the name of book you want to change:\n")
+            find_name = input("Enter the name of book you want to change:\n").lower()
             for book in books:
                 if book["nosaukums"] == find_name:
                     found_books.append(book)
 #tas pats, bet pēc autora
         elif find_option == "author":
-            find_author = input("Enter the author name you are looking for:\n")
+            find_author = input("Enter the author name you are looking for:\n").lower()
             for book in books:
                 if book["autors"] == find_author:
                     found_books.append(book)

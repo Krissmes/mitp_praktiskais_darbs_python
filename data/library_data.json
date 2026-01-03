@@ -75,5 +75,33 @@
         "cena": 5.0,
         "pieejamais skaits": 1,
         "izsniegtais skaits": 90
+    },
+    {
+        "nosaukums": "Test",
+        "autors": "Drive",
+        "cena": 69.0,
+        "pieejamais skaits": 900,
+        "izsniegtais skaits": 0
+    },
+    {
+        "nosaukums": "laba gramata",
+        "autors": "es protams",
+        "cena": 5.0,
+        "pieejamais skaits": 1,
+        "izsniegtais skaits": 0
+    },
+    {
+        "nosaukums": "cita laba gramata",
+        "autors": "vel nez",
+        "cena": 45.0,
+        "pieejamais skaits": 3,
+        "izsniegtais skaits": 0
+    },
+    {
+        "nosaukums": "yyyy",
+        "autors": "xxx0",
+        "cena": 90.0,
+        "pieejamais skaits": 70,
+        "izsniegtais skaits": 0
     }
 ]
