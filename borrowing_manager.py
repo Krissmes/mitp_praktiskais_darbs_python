@@ -70,7 +70,7 @@ def give_book(name, give_count):
         print("ValueError: Grāmatas nosaukumam tiek gaidīts string tipa mainīgais un izsniedzamo grāmatu skaitam tiek gaidīts nenegatīvs integer tipa mainīgais, tika ievadīts kaut kas cits.")   # paziņo lietotājam, ka ievaddatu nosaukumam ir jābūt string formātā un ka izsniedzamo grāmatu skaitam jābūt integer formātā.
     
 
-def recive_book(name, recieve_count):
+def recive_book():
     """
     Funkcija palielina grāmatas pieejamo skaitu un samazina izsniegto skaitu par atgriežamo eksemplāru skaitu
     Sagaida grāmatas nosaukumu (name), str tipa mainīgais; sagaida grāmatas saņemamo eksemplāru skaitu (recieve_count), int tipa mainīgais, kas lielāks par 0
@@ -78,6 +78,10 @@ def recive_book(name, recieve_count):
     Šī darbība netiek veikta, ja ievaddati neatbilst sagaidāmajām vērtībām, vai arī ja funkcijas izpildes laikā, rodas jebkāds error
     
     """
+    name = str(input('Grāmatas nosaukums: '))
+    recieve_count = input('Atgriežamo grāmatu skaits: ')
+
+
     dati = read_data()                                      #nolasa jaunākos datus
     book_exists = False                                     #šis mainīgais ir nepieciešams, lai pārbaudītu, vai beigās atrod grāmatu
     if isinstance(name, str) and isinstance(recieve_count, int) and recieve_count > 0:
@@ -133,7 +137,7 @@ def least_5_given_books():
 
     print(least_given_books)                # parāda lietotājam sarakstu ar piecām visretāk izsniegtajām grāmatām
 
-    
+recive_book()
 
 
 
